@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+</head>
+<body>
+  <!-- formulario de criação -->
+ <form action="/create" method="POST">
+   <input name="title">
+   <button type="submit">
+    Adicionar 
+    </button>
+ </form>
+
+  <!-- exibição da lista de TODOs -->
+  <ul>
+    {% for item in todos %}
+      <li>{{ item.title }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
